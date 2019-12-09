@@ -21,6 +21,9 @@ def read_input():
             points.append(Punct(float(row[0]), float(row[1])))
         row = [float(x) for x in fin.readline().split()]
         A = Punct(float(row[0]), float(row[1]))
+
+        if direction(points[0], points[1], points[2]) > 0:
+            points.reverse()
     return n, A, points
 
 
